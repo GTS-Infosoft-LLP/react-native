@@ -8,12 +8,42 @@
 #import <QuartzCore/QuartzCore.h>
 #import <UIKit/UIKit.h>
 
-#import <React/RCTAnimationType.h>
-#import <React/RCTBorderStyle.h>
-#import <React/RCTDefines.h>
-#import <React/RCTLog.h>
-#import <React/RCTPointerEvents.h>
-#import <React/RCTTextDecorationLineType.h>
+#if __has_include("RCTAnimationType.h")
+  #import "RCTAnimationType.h"
+#else
+ #import <React/RCTAnimationType.h>
+#endif
+
+#if __has_include("RCTBorderStyle.h")
+  #import "RCTBorderStyle.h"
+#else
+ #import <React/RCTBorderStyle.h>
+#endif
+
+#if __has_include("RCTDefines.h")
+  #import "RCTDefines.h"
+#else
+ #import <React/RCTDefines.h>
+#endif
+
+#if __has_include("RCTLog.h")
+  #import "RCTLog.h"
+#else
+ #import <React/RCTLog.h>
+#endif
+
+#if __has_include("RCTPointerEvents.h")
+  #import "RCTPointerEvents.h"
+#else
+ #import <React/RCTPointerEvents.h>
+#endif
+
+#if __has_include("RCTTextDecorationLineType.h")
+  #import "RCTTextDecorationLineType.h"
+#else
+ #import <React/RCTTextDecorationLineType.h>
+#endif
+
 #import <yoga/Yoga.h>
 #if TARGET_OS_IPHONE && WEBKIT_IOS_10_APIS_AVAILABLE
 #import <WebKit/WebKit.h>
