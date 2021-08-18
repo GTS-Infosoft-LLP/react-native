@@ -5,7 +5,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-#import <React/RCTJavaScriptLoader.h>
+#if __has_include("RCTJavaScriptLoader.h")
+  #import "RCTJavaScriptLoader.h"
+#else
+ #import <React/RCTJavaScriptLoader.h>
+#endif
 
 @class RCTBridge;
 @protocol RCTBridgeModule;
