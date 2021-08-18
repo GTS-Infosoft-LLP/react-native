@@ -7,7 +7,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import <React/RCTBridge.h>
+#if __has_include("RCTBridge.h")
+  #import "RCTBridge.h"
+#else
+ #import <React/RCTBridge.h>
+#endif
 
 typedef NS_ENUM(NSInteger, RCTTextEventType) {
   RCTTextEventTypeFocus,
