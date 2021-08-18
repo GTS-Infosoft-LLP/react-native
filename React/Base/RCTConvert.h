@@ -44,7 +44,7 @@
  #import <React/RCTTextDecorationLineType.h>
 #endif
 
-#import <yoga/Yoga.h>
+#import <yoga/yoga/Yoga.h>
 #if TARGET_OS_IPHONE && WEBKIT_IOS_10_APIS_AVAILABLE
 #import <WebKit/WebKit.h>
 #endif
