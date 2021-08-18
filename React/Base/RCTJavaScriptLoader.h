@@ -7,7 +7,11 @@
 
 #import <UIKit/UIKit.h>
 
-#import <React/RCTDefines.h>
+#if __has_include("RCTDefines.h")
+  #import "RCTDefines.h"
+#else
+ #import <React/RCTDefines.h>
+#endif
 
 extern NSString *const RCTJavaScriptLoaderErrorDomain;
 
