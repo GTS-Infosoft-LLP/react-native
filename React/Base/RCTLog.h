@@ -7,9 +7,23 @@
 
 #import <Foundation/Foundation.h>
 
-#import <React/RCTAssert.h>
-#import <React/RCTDefines.h>
-#import <React/RCTUtils.h>
+#if __has_include("RCTAssert.h")
+  #import "RCTAssert.h"
+#else
+ #import <React/RCTAssert.h>
+#endif
+
+#if __has_include("RCTDefines.h")
+  #import "RCTDefines.h"
+#else
+ #import <React/RCTDefines.h>
+#endif
+
+#if __has_include("RCTUtils.h")
+  #import "RCTUtils.h"
+#else
+ #import <React/RCTUtils.h>
+#endif
 
 #ifndef RCTLOG_ENABLED
 #define RCTLOG_ENABLED 1
